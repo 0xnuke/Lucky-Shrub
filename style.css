@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+* li{
+    list-style: none;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+:root{
+    --pr-color: #6AAAA5;
+    --sn-color: #FFFFFF;
+    --bg-color: #EFEFEF;
+    --black-color: #080808;
+}
+
+/* header */
+
+.header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sn-color);
+}
+.logo{
+    margin: 0 auto;
+    padding: 0.6rem 0;
+    padding-left: 40px;
+}
+
+/* nav */
+
+.bar{
+    display: none;
+    color: var(--black-color);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar a{
+    font-size: 1rem;
+    margin: 0 1.5rem;
+    color: var(--black-color);
+    padding: 0 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color: var(--pr-color);
+    transition: 0.4s;
+}
+
+/* banner */
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url('https://cdn.pixabay.com/photo/2019/04/28/02/16/conservatory-4161955_960_720.jpg');
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+}
+
+.banner{
+    height: 1080px;
+    overflow: hidden;
+}
+
+.banner .banner-text{
+    margin-top: 150px;
+}
+
+.banner h1{
+    color: var(--sn-color);
+    text-transform: uppercase;
+    font-size: 128px;
+    text-align: center;
+}
+
+.banner h4{
+    color: var(--sn-color);
+    text-transform: uppercase;
+    font-size: 48px;
+    text-align: center;
+    transform: translateY(280%);
+}
+
+/* service */
+
+.services h1{
+    color: var(--black-color);
+    padding-top: 160px;
+    padding-bottom: 160px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.services .services-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+.services .services-card{
+    height: 480px;
+    width: 520px;
+    background-color: var(--sn-color);
+    box-shadow: 10px 10px 10px rgba(0 , 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.services .services-card:nth-child(2){
+    transform: translateY(-20%);
+}
+
+
+.services .services-pic{
+    overflow: hidden;
+    height: 300px;
+}
+
+.services .services-card .ser-pic-card:hover{
+    transform: scale(1.3);
+}
+
+.services .services-card .ser-pic-card{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+    transform: scale(1);
+    transition: 0.3s ease-out;
+}
+
+.services .services-text h3{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.services .services-text p{
+    text-align: center;
+    font-weight: 300;
+}
+
+.services-btn{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.services .services-text .btn{
+    background-color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 1px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.services .services-text .btn:hover{
+    background-color: var(--pr-color);
+    transition: 0.2s;
+}
+
+.services .services-text .btn:active{
+    background-color: var(--sn-color);
+    transition: 0.2s;
+}
+
+/* about */
+
+.about h1{
+    color: var(--black-color);
+    padding-top: 160px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.about p{
+    padding: 0 40px;
+    margin: 220px 0;
+    font-weight: 300;
+}
+
+.about .about-box{
+    position: relative;
+    background-color: var(--sn-color);
+    max-width: 1600px;
+    height: 100%;
+    border-radius: 6px;
+    margin: 40px auto;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0 , 0, 0, 0.1);
+}
+
+.about .about-box .about-card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.about .about-pic-box{
+    overflow: hidden;
+}
+
+.about .about-box .about-pic-card{
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+    transform: scale(1);
+    transition: 0.3s ease-out;
+}
+
+.about .about-pic-card:hover{
+    transform: scale(1.2);
+}
+
+/* contact */
+
+.contact h1{
+    color: var(--black-color);
+    padding-top: 160px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.contact .contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 8em;
+    flex-wrap: wrap;
+}
+
+.contact .text-container{
+    width: 450px;
+    height: 400px;
+    background-color: var(--sn-color);  
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px rgba(0 , 0, 0, 0.1);
+}
+
+.contact .text-container form{
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact .text-container form{
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact .text-container form input[type='submit']{
+    background-color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 1px;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.contact .text-container form input[type='submit']:hover{
+    background-color: var(--pr-color);
+    transition: 0.2s;
+}
+
+.contact .text-container form input[type='submit']:active{
+    background-color: var(--sn-color);
+    transition: 0.2s;
+}
+
+.contact .text-container form input:hover,.contact .contact-container form textarea:hover{
+    border: solid 2px var(--pr-color);
+}
+
+
+
+/* footer */
+
+footer{
+    padding: 20px 20px;
+    margin-top: 160px;
+    background-color: var(--sn-color);
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h6{
+    margin-right: 20px;
+}
+
+@media screen and (max-width:1140px) {
+    .services .services-card:nth-child(2){
+        transform: translateY(0);
+    }
+    .banner h1{
+        font-size: 84px;
+    }
+
+    .banner h4{
+        font-size: 28px;
+    }
+    .about .about-box .about-card{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .about .about-box p{
+        margin: 100px 0;
+    }
+
+    .bar{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 80px;
+        background-color: var(--sn-color);
+        width: 100%;
+        height: 300px;
+        z-index: 100;
+        opacity: 0;
+    }
+
+    .navbar ul{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar ul li{
+        padding: 20px 0;
+    }
+    .navbar ul li:hover{
+        background-color: var(--bg-color);
+        transition: 0.4s;
+    }
+
+    .show{
+        opacity: 1;
+    }
+}
